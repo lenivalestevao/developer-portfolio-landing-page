@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera — Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Alex Rivera, a full-stack developer building fast, accessible web and mobile apps.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo">alex<span>.dev</span></a>
+      <nav id="nav" class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">&#9680;</button>
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge"><i class="dot"></i> Available for freelance work</span>
+          <h1>Hi, I'm <span class="grad">Alex Rivera</span>.<br>I build things for the web.</h1>
+          <p class="lead">Full-stack developer with 8+ years of experience crafting fast, accessible and maintainable web and mobile products, from first sketch to production.</p>
+          <div class="cta">
+            <a href="#projects" class="btn primary">View my work</a>
+            <a href="#contact" class="btn ghost">Let's talk</a>
+          </div>
+          <ul class="socials" id="socials"></ul>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="avatar">AR</div>
+          <div class="code">
+            <span class="k">const</span> <span class="v">alex</span> = {<br>
+            &nbsp;&nbsp;role: <span class="s">"Full-Stack Dev"</span>,<br>
+            &nbsp;&nbsp;stack: [<span class="s">"JS"</span>, <span class="s">"PHP"</span>, <span class="s">"C#"</span>],<br>
+            &nbsp;&nbsp;coffee: <span class="s">"always"</span><br>
+            };
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid" id="stats"></div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h2>Clean code, thoughtful design, real results.</h2>
+        </div>
+        <div class="about-text">
+          <p>I'm a developer who cares about the whole product: performance, accessibility and the small details that make software pleasant to use. I work with startups and small teams to turn ideas into reliable applications.</p>
+          <p>When I'm not coding, I'm contributing to open source, learning something new or mentoring other developers. Replace this text with your own story.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools I work with every day</h2>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="container">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've worked</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Have a project in mind?</h2>
+          <p class="lead">Send me a message and I'll get back to you within one business day.</p>
+          <p class="mail">hello@example.com</p>
+        </div>
+        <form id="contactForm" class="form" novalidate>
+          <label>Name <input type="text" id="name" required placeholder="Your name"></label>
+          <label>Email <input type="email" id="email" required placeholder="you@email.com"></label>
+          <label>Message <textarea id="message" rows="5" required placeholder="Tell me about your project"></textarea></label>
+          <button class="btn primary" type="submit">Send message</button>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>&copy; <span id="year"></span> Alex Rivera. All rights reserved.</p>
+      <p>Free template by <a href="https://github.com/lenivalestevao" target="_blank" rel="noopener">Leni Junior</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
