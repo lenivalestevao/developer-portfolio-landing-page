@@ -1,59 +1,48 @@
-# Developer Portfolio Landing Page
+# Developer Portfolio - Multi-page Website Template
 
-A free, responsive developer portfolio template built with plain HTML5, CSS3 and JavaScript, no framework. Hero, stats, skills with animated bars, filterable projects, experience timeline and a contact form, ready to download and make your own.
+A free, responsive developer portfolio built with plain HTML5, CSS3 and JavaScript. No frameworks, no build step. It includes project case studies, a blog, services, a printable resume, testimonials and a light and dark theme.
 
 ![Preview](preview.png)
 
-**[Live Demo](https://lenivalestevao.github.io/developer-portfolio-landing-page/)**
+**[Live demo](https://lenivalestevao.github.io/developer-portfolio-landing-page/)**
 
-## Features
+## Pages
 
-- Sticky header with mobile menu
-- Light and dark mode (remembers the visitor's choice, respects system preference)
-- Hero section with availability badge and social links
-- Animated stats strip
-- Skills grouped by area with animated progress bars
-- Projects grid with category filter
-- Experience timeline
-- Contact form that opens the visitor's email app, so no backend is needed
-- Fully responsive and keyboard friendly
-- Zero dependencies: pure HTML, CSS and vanilla JavaScript
+All pages run in a single `index.html` and are routed with the URL hash (for example `#/projects`), so it works on any static host such as GitHub Pages.
 
-## Getting Started
+| Page | Route | What it does |
+| --- | --- | --- |
+| Home | `#/` | Hero with code card, animated stats, about, skill bars, projects carousel, experience, testimonials carousel, latest posts, call to action |
+| Projects | `#/projects` | Search and Web, Mobile and API filters |
+| Case study | `#/project/1` | Problem, solution, results, facts and previous/next links |
+| About | `#/about` | Story, values and tech stack |
+| Skills | `#/skills` | Animated skill bars by area |
+| Experience | `#/experience` | Full timeline and education |
+| Services | `#/services` | Offers with prices and the working process |
+| Testimonials | `#/testimonials` | Client quotes |
+| Blog | `#/blog` and `#/blog/1` | Post list, article pages and a newsletter box |
+| Contact | `#/contact` | Contact form and links |
+| Resume | `#/resume` | Printable resume (print or save as PDF) |
+| Privacy, 404 | `#/privacy` and any unknown route | Sample privacy page and a friendly not-found page |
 
-1. Download or clone this repository
-2. Open `index.html` in your browser. No build step required
+It also includes a dark mode toggle that remembers your choice and a mobile off-canvas menu.
 
-## Customization
-
-**Content:** your name, links, skills, projects and experience are plain JavaScript arrays at the top of `script.js`. Edit them and the page re-renders itself. Also update the name, title and email in `index.html`.
-
-**Colors:** all colors live as CSS custom properties at the top of `style.css`:
-
-```css
-:root {
-  --primary: #4f6bff;
-  --accent: #14b8a6;
-  ...
-}
-```
-
-## Deploy for free
-
-Enable **GitHub Pages** (Settings, Pages, Deploy from branch `main`) and your portfolio is online in a minute.
-
-## Project Structure
+## Structure
 
 ```
-developer-portfolio-landing-page/
-├── index.html   # Page structure
-├── style.css    # Design tokens, layout, dark mode
-├── script.js    # Your content + rendering
-└── README.md
+index.html   # page shell: header and footer
+style.css    # all styles and the light and dark design tokens
+script.js    # router, pages, demo data, filters, forms
 ```
+
+## Customize
+
+- **Your content:** edit the arrays at the top of `script.js` (`PROJECTS`, `SKILLS`, `JOBS`, `SERVICES`, `REVIEWS`, `POSTS`, `STACK`).
+- **Colors:** change the CSS variables in `:root` and `[data-theme="dark"]` at the top of `style.css`.
+- **Name and links:** replace "Alex Rivera", "alex.dev" and the social links in `index.html` and `script.js`.
+
+The theme choice is kept in `localStorage`. The contact and newsletter forms are demos only, so connect them to your own service before going live.
 
 ## License
 
-MIT. Free to use for personal or commercial projects. A link back is appreciated but not required.
-
-Made by [Leni Junior](https://github.com/lenivalestevao). Check out my other free templates on my profile.
+MIT
